@@ -1,10 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
-import { Routes, Route} from 'react-router-dom'
+import { Routes, Route, Link} from 'react-router-dom'
 import { Home } from './pages/Home';
 import { Private } from './pages/Private';
-import { Link } from 'react-router-dom';
+import { RequireAuth } from './contexts/Auth/RequireAuth';
+
 
 function App() {
   return (
@@ -13,13 +13,13 @@ function App() {
       <h1>Header do site</h1>
       <nav>
         <Link to ="/">Home</Link>
-        <Link to ="/privada">Privada</Link>
+        <Link to ="/private">Página Privada</Link>
       </nav>
      </header>
      <hr/>
      <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/private" element={<Private/>}/>
+      <Route path="/private" element={<RequireAuth><Private/></RequireAuth>}/>
      </Routes>
     </div>
   );
