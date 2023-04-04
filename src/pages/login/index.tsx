@@ -1,13 +1,26 @@
 import {useState} from 'react'
+import { AuthContext } from '../../contexts/Auth/AuthContext'
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 export const Login = () => {
+    const auth = useContext(AuthContext)
+    const navigate = useNavigate()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     
-    const handleLogin = () =>{ 
-        
+    const handleLogin = async () =>{ 
+        if(email && password){
+            const isLogged = await auth.signin(email, password);
+            if(isLogged){
+                navigate('/');
+            }else{
+                alert("Não deu certo")
+            }
+        }
 
     }
     return(
