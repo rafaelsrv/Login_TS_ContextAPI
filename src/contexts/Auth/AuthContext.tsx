@@ -7,4 +7,4 @@ export type AuthContextType = {
     signout: () => void;
 }
 
-export const AuthContext = createContext<AuthContextType>(null!);
+export const AuthContext = createContext<AuthContextType>(null!);//criando contexto
