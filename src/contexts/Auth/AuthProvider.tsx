@@ -40,10 +40,10 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     const setToken = (token: string) => {
         localStorage.setItem('authToken', token);
     }
-
+//Exibindo todo o conteúdo da página
     return (
         <AuthContext.Provider value={{ user, signin, signout }}>
-            {children}
+            {children} 
         </AuthContext.Provider>
     );
 }
