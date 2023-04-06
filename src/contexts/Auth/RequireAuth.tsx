@@ -3,7 +3,7 @@ import { Login } from "../../pages/login";
 import { AuthContext } from "./AuthContext";
 
 export const RequireAuth = ({ children }: { children: JSX.Element }) => {
-    const auth = useContext(AuthContext);// mdsa
+    const auth = useContext(AuthContext);// mdsaw
 
     if (!auth.user) {
        
