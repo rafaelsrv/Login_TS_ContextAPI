@@ -13,9 +13,11 @@ export const Login = () => {
 
     
     const handleLogin = async () =>{ 
+        
         if(email && password){
             const isLogged = await auth.signin(email, password);
             if(isLogged){
+                
                 navigate('/');
             }else{
                 alert("Não deu certo")
@@ -23,6 +25,7 @@ export const Login = () => {
         }
 
     }
+    
     return(
         <div>
             <h2>Página fechada</h2>
