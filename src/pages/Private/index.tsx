@@ -6,7 +6,4 @@ export const Private = () => {
     return(
         <div>
             <h2>Página privada</h2>
-            Olá {auth.user?.name}, Tudo bem!?!!@!!!!!@#@4!@
-        </div>
-    )
-}
+            Olá {auth.user?.name}, Tudo bem!?!!@!!!!!@#@4!@!@#
