@@ -7,4 +7,4 @@ export type AuthContextType = {
     signout: () => void;
 }
 
-export const AuthContext = createContext<AuthContextType>(null!);//c#riAando contexto
+export const AuthContext = createContext<AuthContextType>(null!);//c#ri@Aando contexto
